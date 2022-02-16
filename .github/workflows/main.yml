@@ -31,6 +31,9 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '2.8.0'
+      - uses: nttld/setup-ndk@v1
+        with: 
+          ndk-version: r21e
       - run: flutter pub get
       - run: flutter build apk --debug
       - uses: actions/upload-artifact@v1
